@@ -91,7 +91,9 @@ class GamePole:
 		
 
 
-GM = GamePole(10, 10)
+N = int(input(f"Введите размер поля: "))
+M = int(input(f"Введите количество мин: "))
+GM = GamePole(M, N)
 #print(GM.pole[0].mine)
 #print(sorted(GM.m_indxes))
 GM.show()
@@ -100,5 +102,5 @@ while user_input not in GM.m_indxes:
 	user_input = int(input(f"Введите номер клетки до {GM.N**2}: "))
 	GM.pole[user_input-1].fl_open = True
 	os.system('cls')
-	print(sorted(GM.m_indxes))
+	#print(sorted(GM.m_indxes))
 	GM.show()
